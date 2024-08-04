@@ -6,6 +6,11 @@ html {
     font-size: 62.5%;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
@@ -53,17 +58,19 @@ a {
 
 /* ============ Header ============ */
 
-.header {
-    background: #e6f0ff;
-    height: 736px;
-    position: relative;
+.fixed-header {
+    background-color: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
-    margin-bottom: 39px;
+    padding: 12px 0;
+    background-color: #e6f0ff;
 }
 
 .navbar ul {
@@ -101,14 +108,21 @@ a {
 
 /* ============ Hero inf ============ */
 
-.content .hero {
-    margin-top: 130px;
+.hero-wrap {
+    display: flex;
+    /* Để trường hợp trong herowrap có từ 2 con trở lên thì vẫn nằm dọc */
+    flex-direction: column;
+    /* Canh giữa chữ cho máy có độ phân giải khác nhau thì chữ vẫn ở giữa */
+    justify-content: center;
+    background: #e6f0ff;
+    height: calc(100vh - 90px);
+    position: relative;
 }
 
-.hero .info {
+.hero-wrap .info {
     max-width: 51%;
 }
-.content .hero .sub-title {
+.content .sub-title {
     margin-bottom: 8px;
     color: #687690;
     font-size: 1.8rem;
@@ -116,7 +130,7 @@ a {
     letter-spacing: 0.01em;
 }
 
-.content .hero .title {
+.hero-wrap .content .title {
     margin-bottom: 30px;
     color: #000336;
     font-size: 6.3rem;
@@ -124,7 +138,7 @@ a {
     line-height: 1.19;
 }
 
-.content .hero .desc {
+.hero-wrap .content .desc {
     margin-bottom: 60px;
     color: #5a6473;
     font-size: 1.8rem;
@@ -132,14 +146,17 @@ a {
     line-height: 177.778%;
 }
 
-.hero .btn-inf {
+.hero-wrap .btn-inf {
     min-width: 170px;
 }
 
-.hero .hero-img {
+.hero-wrap .hero-img {
     position: absolute;
     bottom: 0;
     right: calc((100vw - 1110px) / 2 - 100px);
+    width: 480px;
+    height: 480px;
+    object-fit: contain;
 }
 
 .client .row {
@@ -166,7 +183,19 @@ a {
 }
 
 .client .row-3 {
-    margin-top: 77px;
+    margin-top: 70px;
+}
+
+.client .image {
+    display: flex;
+    padding: 0 30px;
+    height: 91px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.client .image:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* =========== Guides ========== */
@@ -596,7 +625,7 @@ a {
 .footer .social {
     margin-top: 50px;
     display: flex;
-    gap: 10px;
+    gap: 16px;
 }
 
 .footer .social .social-link {
