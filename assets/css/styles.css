@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ============ Common ============ */
+
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    /* Để cho dù có nhiều chữ hơn, vẫn không dính sát lề */
+    min-width: 98px;
+    background-color: #0f1b4c;
+    border-radius: 8px;
+    /* Đa số các nút bấm có padding như dưới */
+    padding: 18px 16px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+/* ============ Header ============ */
+
+.header {
+    background: #e6f0ff;
+    height: 736px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+    margin-bottom: 39px;
+}
+
+.navbar ul {
+    display: flex;
+    margin-right: auto;
+}
+
+.navbar .logo {
+    margin-right: 50px;
+}
+
+.navbar ul a {
+    padding: 8px 14px;
+    color: #4f5361;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.navbar .action-link {
+    color: #0f1b4c;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* Chỉ nút btn trong navbar là hơi khác biệt nên set lại padding */
+.navbar .action-btn {
+    margin-left: 18px;
+    padding: 13px 16px;
+    border-radius: 8px;
+}
+
+.navbar ul li:hover a {
+    text-decoration: underline;
+}
+
+/* ============ Hero inf ============ */
+
+.content .hero {
+    margin-top: 130px;
+}
+
+.hero .info {
+    max-width: 51%;
+}
+.content .hero .sub-title {
+    margin-bottom: 8px;
+    color: #687690;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.content .hero .title {
+    margin-bottom: 30px;
+    color: #000336;
+    font-size: 6.3rem;
+    font-weight: 700;
+    line-height: 1.19;
+}
+
+.content .hero .desc {
+    margin-bottom: 60px;
+    color: #5a6473;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 177.778%;
+}
+
+.hero .btn-inf {
+    min-width: 170px;
+}
+
+.hero .hero-img {
+    position: absolute;
+    bottom: 0;
+    right: calc((100vw - 1110px) / 2 - 100px);
+}
+
+.client .row {
+    /* background-color: #ccc; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.client {
+    margin-top: 79px;
+    padding: 43px 0 41px;
+}
+
+.client .row-2 {
+    margin-top: 23px;
+}
+
+.client .desc {
+    color: #7d8589;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.client .row-3 {
+    margin-top: 77px;
+}
+
+/* =========== Guides ========== */
+
+.guides {
+    margin-top: 40px;
+    padding: 93px 0 79px;
+}
+
+.guides h2 {
+    position: relative;
+    color: #000339;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.guides h2::before {
+    content: "";
+    /* display: inline-block; */
+    position: absolute;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guides .desc {
+    width: 459px;
+    max-width: 100%;
+    text-align: center;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+    margin: 20px auto 0;
+}
+
+/* ============ Guides 2 =========== */
+
+.guides .list-guide {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.guides .list-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guides .list-guide .sub-title {
+    margin-top: 26px;
+    color: #3b3c45;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.guides .list-guide .link-guide {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0689ff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.guides .arrow {
+    margin-left: 7px;
+}
+
+.guides .guide-button {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.guides .button {
+    min-width: 170px;
+}
+
+/* ============ FEATURE =========== */
+
+.feature {
+    margin-top: 41px;
+    padding: 110px 0;
+    background: #f5fafe;
+}
+
+.feature .sub-title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.feature .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.feature .desc {
+    color: #5a6473;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.feature .link span {
+    color: #0689ff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.feature .link .arrow {
+    position: relative;
+    top: -2px;
+}
+/* Feature list */
+
+.feature .list {
+    display: flex;
+    margin-top: 70px;
+    gap: 30px;
+}
+
+.feature .list .item {
+    background-color: white;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.feature .list .thumb {
+    width: 100%;
+    height: 227px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.feature .body {
+    padding: 17px 38px 24px 20px;
+}
+
+.feature .list .title a {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.feature .list .desc {
+    margin-top: 11px;
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    font-weight: 500;
+    --line-clamp: 3;
+}
+
+.feature .list .info {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.feature .info .label {
+    margin-left: 8px;
+    margin-right: 22px;
+    color: #4d4d52;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.feature .info .label:last-child {
+    margin-right: 0;
+}
+
+/* ============= STATS ============= */
+/* ROW */
+.stats {
+    padding: 50px 0;
+    margin-top: 75px;
+}
+
+.stats .content {
+    width: 1048px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block {
+    position: relative;
+    width: 50%;
+}
+
+.stats .img-block .stat-1 {
+    display: block;
+    object-fit: cover;
+    margin-left: auto;
+    width: 400px;
+    height: 460px;
+    border-radius: 12px;
+    box-shadow: 40px 80px 155px 0px rgba(30, 103, 113, 0.03);
+}
+
+.stats .stats-trend {
+    background-color: #fff;
+    border-radius: 0px 0px 12px 12px;
+    width: 239px;
+    padding: 45px 23px 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stats .stats-trend .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .stats-trend .value {
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 500;
+    letter-spacing: 0.01;
+}
+
+.stats .stats-trend .desc {
+    margin-top: 8px;
+    color: #a7a7a7;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 194px;
+}
+
+.stats .stats-trend .separate {
+    border: 1.2px solid #e9e9e9;
+    margin-top: 25px;
+}
+
+.stats-trend .avatar-block {
+    margin-top: 26px;
+    display: flex;
+    gap: 17px 14px;
+    flex-wrap: wrap;
+}
+
+.stats-trend .avatar-group {
+    display: flex;
+}
+
+.stats-trend .avatar-group .avatar {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -3px;
+    color: #fff;
+    font-family: "Circular Std";
+    font-size: 0.7rem;
+    font-weight: 450;
+    letter-spacing: -0.145px;
+    background-color: var(--avatar-color, #fff);
+    /* Xử lý chữ vào giữa */
+    line-height: 16px;
+    text-align: center;
+}
+
+.stats-trend .avatar-group .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats .info {
+    width: 50%;
+    align-self: center;
+    padding: 0 169px;
+}
+
+.stats .info .sub-title::before {
+    content: "";
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.stats .info .sub-title {
+    color: #000339;
+    width: 269px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.28571;
+    position: relative;
+}
+
+.stats .info .desc {
+    margin-top: 20px;
+    color: #5a6473;
+    width: 309px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+/* ROW */
+.stats .row-qty {
+    margin-top: 110px;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.stats .qty-item .qty {
+    color: #000;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.stats .qty-item .qty-desc {
+    color: #7b8087;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+/* ============= SUBSCRIPTION ============ */
+
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    display: flex;
+    height: 370px;
+    align-items: center;
+    border-radius: 20px;
+    background: #063183;
+    position: relative;
+}
+
+.subscription .info {
+    width: 671px;
+    padding: 0 80px;
+}
+
+.subscription .title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.subscription .desc {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.subscription .button {
+    margin-top: 20px;
+    color: #002366;
+    background: #fff;
+    min-width: 151px;
+}
+
+.subscription .image {
+    position: absolute;
+    right: 221px;
+    bottom: 0;
+}
+
+/* =========== FOOTER ============ */
+
+.footer {
+    margin-top: 55px;
+}
+
+.footer .content {
+    padding: 50px 0 58px;
+}
+
+.footer .row {
+    display: flex;
+    gap: 160px;
+}
+
+.footer .heading {
+    color: #1c1c1d;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 42px;
+}
+
+.footer .list a {
+    display: inline-block;
+    margin-bottom: 17px;
+    min-width: 125px;
+}
+
+.footer .list li:last-child a {
+    margin-bottom: 0;
+}
+
+.footer .column .desc,
+.footer .list a {
+    color: #7a7a7e;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.footer .social {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.footer .social .social-link {
+    background: #a3a6ab;
+    color: #222;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footer .social .social-link:hover {
+    background: #2e2e2e;
+}
+
+.footer .row-2 {
+    display: flex;
+    margin-top: 81px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo {
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+.footer .desc-footer {
+    color: #c2c2c2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 250px;
+    white-space: nowrap;
+}
